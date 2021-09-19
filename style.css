@@ -1,0 +1,94 @@
+/* Table of contents
+1. Fonts
+2. General styles
+3. Variables
+4. Layout
+5. Media queries */
+
+/* Fonts */
+@font-face {
+  font-family: "Knewave";
+  src: url("./fonts/Knewave-Regular.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  src: url("./fonts/Jost-Bold.ttf");
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --text-clr: #f4f4f4;
+  --main-clr: #037171;
+  --background-clr: #03312e;
+}
+
+/* Layout */
+body {
+  min-height: 100vh;
+  background: var(--background-clr);
+  font-family: "Knewave", sans-serif;
+}
+h1,
+.box {
+  color: var(--text-clr);
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 1em 0em 1em;
+  font-size: 2.5rem;
+  font-family: "Jost";
+}
+.box {
+  min-height: 50vh;
+  width: 90vw;
+  margin: 1em auto;
+  display: grid;
+  place-content: center;
+  font-size: 3rem;
+  background-size: 100% 100%;
+  background-color: var(--main-clr);
+  background-image: url("./images/mountain.jpg");
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0em 0.5em 0.25em rgba(0, 0, 0, 0.35);
+  transition: transform 400ms ease-in;
+}
+.box p {
+  background: linear-gradient(white, white);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: background-size 400ms ease-in;
+}
+.box:hover {
+  transform: translateY(-20px);
+}
+.box:hover p {
+  background-size: 100% 2px;
+}
+.one {
+  background-blend-mode: multiply;
+}
+.two {
+  background-blend-mode: screen;
+}
+.three {
+  background-blend-mode: overlay;
+}
+
+/* Media queries */
+@media screen and (min-width: 50em) {
+  .boxset {
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+  }
+}
