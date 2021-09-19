@@ -46,6 +46,9 @@ h1 {
   font-size: 2.5rem;
   font-family: "Jost";
 }
+.boxset {
+  margin-bottom: 7.5em;
+}
 .box {
   min-height: 50vh;
   width: 90vw;
