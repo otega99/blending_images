@@ -50,9 +50,9 @@ h1 {
   margin-bottom: 10em;
 }
 .box {
-  min-height: 50vh;
+  height: 8em;
   width: 90vw;
-  margin: 1em auto;
+  margin: 0.5em auto;
   display: grid;
   place-content: center;
   font-size: 3rem;
@@ -88,10 +88,15 @@ h1 {
 }
 
 /* Media queries */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 40em) {
   .boxset {
     display: flex;
+    flex-wrap: wrap;
     gap: 2em;
     padding: 1em;
+  }
+  .box {
+    flex: 1 1 30%;
+    max-width: 50vw;
   }
 }
